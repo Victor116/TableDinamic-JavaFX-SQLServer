@@ -12,8 +12,8 @@ public class Conexion {
     static Connection conn;
     static Statement st;
     static String bd = "yelp";           //Nombre de la base de datos
-    static String user = "replicacion";  //Usuario        
-    static String pass = "1234";             //Contraseña
+    static String user = "user";  //Usuario        
+    static String pass = "***";             //Contraseña
     static String port = "1433";
     static String IP = "MEXICANS-PC";
     static String url = "jdbc:sqlserver://"+ IP +":"+ port +"; databaseName="+ bd +";user="+ user +";password="+ pass+"";

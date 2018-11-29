@@ -46,7 +46,6 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML private void LlamarDataBaseWithSQL(){
         try{
-            System.out.println( textSQL.getText() );
             rs = con.BuscarEnLaBaseDeDatos(textSQL.getText() );                //Busco en la base datosd
             ResultSetMetaData rsmd = rs.getMetaData();
             int ColumnCount = rsmd.getColumnCount();
@@ -76,7 +75,8 @@ public class FXMLDocumentController implements Initializable {
             TableDataBase.setItems(data);
         } catch (SQLException ex) {
             Alerta("1.- Puede que no tengas tablas en tu base de datos'.\n"
-                + "2.- Puede que se haga escrito mal.");
+                + "2.- Puede que se haga escrito mal.\n"
+                + "3.- Puede que este mal estructurado para guardar la información");
         }
     }
     
